@@ -3,12 +3,11 @@ services:
     dkr-eclim:
         build: .
         user: eclim
-        volumes:
-            - '~/.vim:/home/eclim/.vim'
+        #volumes:
+            #- '~/.vim:/home/eclim/.vim'
+            #- '/tmp/.X11-unix:/tmp/.X11-unix:rw'
             #- '~/.vim/eclim:/home/eclim/.vim/eclim'
             #- '~/.vim/plugin/eclim.vim:/home/eclim/.vim/plugin/eclim.vim'
-        expose:
-            - "9091"
         ports:
-            - "9092:9091"
+            - "9091:9091"
         command: '/home/eclim/entrypoint.sh'

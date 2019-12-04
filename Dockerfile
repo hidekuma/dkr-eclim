@@ -43,5 +43,8 @@ RUN /home/${USER}/eclim_2.8.0.bin \
   --vimfiles=/home/${USER}/.vim \
   --plugins=jdt
 
+ENV DISPLAY :1
+
+EXPOSE 9091
 COPY ./entrypoint.sh /home/${USER}
 RUN sudo chown eclim:eclim /home/${USER}/entrypoint.sh
